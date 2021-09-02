@@ -65,11 +65,11 @@ console.log( age );
 
 El mensaje que se entrega a la función prompt(..) -- en este caso, "Please tell me your age:" -- es impreso en una ventana.
 
-![[fig2.png]]
+![alt text](https://github.com/impak/Writting-about-Js/blob/main/img/fig2.png)
 
 Una vez se ingresa el texto al dar click en "OK", se observa que el valor que ingresó es guardado en la variable age, lo que puede verse cuando por salida usamos console.log(..):
 
-![[fig3.png]]
+![alt text](https://github.com/impak/Writting-about-Js/blob/main/img/fig3.png)
 
 **Operadores**
 
