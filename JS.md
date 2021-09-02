@@ -34,7 +34,7 @@ console.log( b );
 
 Proceso de ejecutar código en la consola:
 
-![[fig1.png]]
+![alt text](https://github.com/impak/Writting-about-Js/blob/main/img/fig1.png)
 
 El resultado de la ejecución es **42**.
 
