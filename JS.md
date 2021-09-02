@@ -1,4 +1,4 @@
-# Javascript
+# Writting about Javascript
 **Sentencias**
 
 En un lenguaje de programación, un conjunto de palabras, números, y operadores que llevan a cabo una tarea específica se denomina sentencia. En JavaScript, una sentencia podría verse de la siguiente forma:
