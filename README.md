@@ -1,2 +1,2 @@
-# Written-about-Js
+# Writting about Js
 Apuntes sobre lenguaje de programación Javascript
