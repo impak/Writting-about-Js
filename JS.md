@@ -289,3 +289,28 @@ if (valor > 10) {			// <--Bloque adjunto al if
 ```
 El bloque <code>{...}</code> ejecutará las sentencias si el condicional es verdadero.
 
+
+## **Condicionales**
+
+Un condicional muy utilizado en JavaScript es **_if_**. 
+
+La sentencia **_if_** puede ser tratada como *true* o *false*, es decir: "Si esta condición es verdadera, haga lo siguiente...".  Esta sentencia requiere una expresión dentro del paréntesis la cual será tratada como *true* o *false* dependiendo de la cantidad mostrada en la variable.
+
+Asimismo puede declararse una alternativa si la condición no es verdadera, con la sentencia **_else_**. Considere:
+
+```jsx
+var edad;
+prompt("Ingrese su edad: ");
+
+if(edad > 18)
+{
+    alert("Ha ingresado al sistema.");
+}else
+{
+    alert("Error. No se puede ingresar al sistema.");
+}
+// Si la edad es mayor a 18, puede ingresar al sistema. En cambio, si la edad es menor NO puede ingresar al sistema.
+```
+
+
+Los condicionales existen en formas más allá del **_if_**. Por ejemplo, la sentencia _switch_ puede ser usada como un atajo para una serie de sentencias *if...else*.
