@@ -1,5 +1,6 @@
-# Writting about Javascript
-**Sentencias**
+# **Writting about Javascript**
+
+## **Sentencias**
 
 En un lenguaje de programación, un conjunto de palabras, números, y operadores que llevan a cabo una tarea específica se denomina sentencia. En JavaScript, una sentencia podría verse de la siguiente forma:
 
@@ -7,7 +8,7 @@ En un lenguaje de programación, un conjunto de palabras, números, y operadores
  a = b * 2;
 ```
 
-**Expresiones**
+##**Expresiones**
 
 Esta sentencia tiene varias "Expresiones" en ella:
 
@@ -20,7 +21,7 @@ a = b * 2;
 -   `b * 2` es una _expresión aritmética_, que significa hacer la multiplicación
 -   `a = b * 2` es una _expresión de asignación_, que significa asignar el resultado de la expresión `b * 2` a la variable `a`.
 
-**Ejecución**
+## **Ejecución**
 
 Un programa debe ser ejecutado.
 
@@ -38,7 +39,7 @@ Proceso de ejecutar código en la consola:
 
 El resultado de la ejecución es **42**.
 
-**Salida**
+## **Salida**
 
 ```jsx
 console.log( x );
@@ -54,7 +55,7 @@ Segundo, "console" es una referencia al objeto dónde la función log(..) se enc
 
 Otra forma de producir salida es ejecutar la sentencia alert(..). Pero está opción tendrá salida como ventana emergente (Pop-up) interrumpiendo la interfaz del navegador.
 
-**Entrada**
+## **Entrada**
 
 La manera más común de recibir información para una página en HTML es mostrar elementos de tipo formulario. De modo el usuario pueda escribir, y luego usar JS para leer esos valores y guardarlos en variables. Pero existe un modo más sencillo de obtener entrada del usuario, para efectos de aprendizaje. Use la función prompt(..):
 
@@ -71,7 +72,7 @@ Una vez se ingresa el texto al dar click en "OK", se observa que el valor que in
 
 ![alt text](https://github.com/impak/Writting-about-Js/blob/main/img/fig3.png)
 
-**Operadores**
+## **Operadores**
 
 Los operadores son la forma en la que ejecutamos acciones en variables y valores.
 
@@ -104,7 +105,7 @@ Acá, se asigna el valor 2 a la variable a. Entonces, obtenemos el valor de la v
     
 -   Lógicos: `&&` (y), `||` (o), como en `a || b` que selecciona a o b. Estos operadores son usados para expresar condicionales compuestos, como si a o b seanverdaderos.
 
-**Valores y Tipos**
+## **Valores y Tipos**
 
 Las representaciones para los valores se llaman _tipos_ en terminología de programación. JavaScript posee tipos construidos para cada una de estas representaciones también llamados tipos _primitivos_:
 
@@ -126,7 +127,7 @@ true;
 false;
 ```
 
-**Conversión Entre Tipos**
+## **Conversión Entre Tipos**
 
 Si usted tiene un tipo de dato `number` pero necesita imprimirlo en pantalla, necesitará convertir el valor a tipo `string` y esta conversión en JavaScript es llamada "coerción". Similarmente, si alguien ingresa una serie de caractéres numéricos en un formulario de una página de ecommerce, es un `string`, pero si necesita usar ese valor para realizar operaciones matemáticas, necesitará _coercer_ al dato a que sea un `number`.
 
@@ -140,7 +141,7 @@ console.log( a );	// "42"
 console.log( b );	// 42
 ```
 
-**Comentarios en el Código**
+## **Comentarios en el código**
 
 Estos son partes de texto en su programa que son insertados puramente para explicárselo a un humano. El intérprete/compilador siempre ignora estos comentarios.
 
@@ -180,7 +181,7 @@ var a = /* arbitrary value */ 42;
 console.log( a );	// 42
 ```
 
-**Variables**
+## **Variables**
 
 Las variables son utilizadas como contenedores donde guardamos algún valor de tipo específico (pueden ser numbers, strings, etc.).
 
@@ -206,7 +207,7 @@ JavaScript utiliza el _tipado dinámico_, lo que significa que las variables pue
 
 Las variables en JavaScript son declaradas utilizando la sentencia <code>_**var**_</code>.
 
-Considere:
+ *Considere:*
 ```jsx
 var valor = 10.00;
 
@@ -255,4 +256,36 @@ La variable **TAX_RATE** es únicamente *constante* por convención. Si se llega
 
 
 Las constantes son útiles como las variables con valores sin cambiar, excepto que las constantes previenen el cambio accidental de algún valor dónde sea que se haga después de la asignación inicial. Si usted intentó asignar algún valor distinto a **TAX_RATE** luego de su primera declaración, su programa podría rechazar el cambio.
+
+
+
+## **Bloques**
+
+Un bloque es definido rodeando una o más sentencias con una pareja de corchetes ``` {..}```. 
+
+*Considere*:
+
+```jsx
+var valor = 10.00;
+
+//bloque general
+{
+    valor = valor * 2;
+    console.log(valor); //20.00
+}
+```
+
+Los bloques son añadidos a algunas secuencias de control, como la sentencia **_if_** o un ciclo.
+
+_Ejemplo_
+```jsx
+var valor = 99.99;
+
+// iEs el valor mayor a 10?
+if (valor > 10) {			// <--Bloque adjunto al if
+	valor = valor * 2;
+	console.log( valor );	// 199.98
+}
+```
+El bloque <code>{...}</code> ejecutará las sentencias si el condicional es verdadero.
 
