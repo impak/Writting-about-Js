@@ -179,3 +179,80 @@ var a = /* arbitrary value */ 42;
 
 console.log( a );	// 42
 ```
+
+**Variables**
+
+Las variables son utilizadas como contenedores donde guardamos algún valor de tipo específico (pueden ser numbers, strings, etc.).
+
+
+En nuestras variables podemos encontrarnos con dos versiones de tipado:
+
+- El _tipado estático_ o _tipado fuerte_ es utilizado para la precisión buscada dentro de un código, esto previene conversiones de valor no intencionadas.
+
+```jsx
+var example = 5;
+    //En este caso estamos asignándole a la variable example el valor 5. A esto también se lo llama "hardcodeo", que significa perder la prolijidad dejando valores y/o comportamientos fijos en el código de nuestro programa.
+```
+
+- El _tipado dinámico_ o _tipado débil_ permite a una variable almacenar cualquier tipo de valor en el tiempo.
+
+```jsx
+var example;
+
+//En este otro caso, no le estamos asignando valor alguno a la variable example, por lo cual, es muy probable que esta variable pueda ser vulnerada ya que no se le ha asignado ningún tipo (string, number, char, etc.).
+```
+
+JavaScript utiliza el _tipado dinámico_, lo que significa que las variables pueden guardar valores de cualquier tipo sin ningún tipado fuerte.
+
+Las variables en JavaScript son declaradas utilizando la sentencia <code>_**var**_</code>.
+
+Considere:
+```jsx
+var valor = 10.00;
+
+valor = valor * 2;
+
+console.log(valor); //20.00
+
+//Si convertimos 'valor' a un string y agregamos "$" al principio:
+
+valor = "$" + String(valor);
+
+console.log(valor); // "$20.00"
+```
+La variable **valor** inicia guardando el número 10.00, luego almacena el resultado dde tipo **number** de **valor * 2**, lo cual es **20.00**.
+
+La primer instrucción **console.log(...)** tiene que hacer coerción *implícita* desde **number** a **string** para imprimirllo.
+
+Luego, la sentencia **valor = "signoPesos" + String (valor)** realiza coerción *explícita* del valor **20.00** a **string** y añade el caracter **"$"** al inicio. Hasta este punto, **valor** almacena el **string** con valor **"20.00"**, entonces el segundo **console.log(...)** no necesita realizar ninguna coerción para imprimirlo.
+
+Algunos desarrolladores pueden notar la flexibilidad de usar la variable **valor** para cada uno de los valores. En cambio, quienes prefieran el tipado estático podrían preferir una variable separada como **valorStr** para guardar el resultado final **"$20.00"**, ya que es de un tipo diferente.
+
+En este ejemplo **valor** almacena un valor que cambia con el curso del programa, gestionando el estado del mismo (el estado es seguir los cambios a los valores a medida que el programa es ejecutado).
+
+Algunas variables pueden centralizarse en la asignación de valores, estas son llamadas **constantes**, cuando se declara una variable con un valor e intención de *no cambiar* durante el programa.
+
+Las constantes son declaradas en la parte superior de un programa, así es conveniente para el desarrollador tener un lugar donde pueda cambiar el valor si así lo deseáse. 
+
+Por convención, las constantes se escriben con mayúscula sostenida y guiones bajos entre las palabras.
+
+Ejemplo:
+ 
+```jsx
+    const TAX_RATE = 0.08;	// 8% sales tax
+
+    var valor = 99.99;
+
+    valor = valor * 2;
+
+    valor = valor + (valor * TAX_RATE);
+
+    console.log( valor );				// 215.9784
+    console.log( valor.toFixed( 2 ) );	// "215.98"
+ ```
+
+La variable **TAX_RATE** es únicamente *constante* por convención. Si se llegara a necesitar actualizar el valor de el mismo a un 9%, podemos fácilmente actualizar el programa asignando a **TAX_RATE** el valor de **0.09** en un solo lugar, en vez de encontrar todas las ocurrencias del valor **0.08**.
+
+
+Las constantes son útiles como las variables con valores sin cambiar, excepto que las constantes previenen el cambio accidental de algún valor dónde sea que se haga después de la asignación inicial. Si usted intentó asignar algún valor distinto a **TAX_RATE** luego de su primera declaración, su programa podría rechazar el cambio.
+
