@@ -1,5 +1,6 @@
-# Writting about Javascript
-**Sentencias**
+# **Writting about Javascript**
+
+## **Sentencias**
 
 En un lenguaje de programación, un conjunto de palabras, números, y operadores que llevan a cabo una tarea específica se denomina sentencia. En JavaScript, una sentencia podría verse de la siguiente forma:
 
@@ -7,7 +8,7 @@ En un lenguaje de programación, un conjunto de palabras, números, y operadores
  a = b * 2;
 ```
 
-**Expresiones**
+##**Expresiones**
 
 Esta sentencia tiene varias "Expresiones" en ella:
 
@@ -20,7 +21,7 @@ a = b * 2;
 -   `b * 2` es una _expresión aritmética_, que significa hacer la multiplicación
 -   `a = b * 2` es una _expresión de asignación_, que significa asignar el resultado de la expresión `b * 2` a la variable `a`.
 
-**Ejecución**
+## **Ejecución**
 
 Un programa debe ser ejecutado.
 
@@ -38,7 +39,7 @@ Proceso de ejecutar código en la consola:
 
 El resultado de la ejecución es **42**.
 
-**Salida**
+## **Salida**
 
 ```jsx
 console.log( x );
@@ -54,7 +55,7 @@ Segundo, "console" es una referencia al objeto dónde la función log(..) se enc
 
 Otra forma de producir salida es ejecutar la sentencia alert(..). Pero está opción tendrá salida como ventana emergente (Pop-up) interrumpiendo la interfaz del navegador.
 
-**Entrada**
+## **Entrada**
 
 La manera más común de recibir información para una página en HTML es mostrar elementos de tipo formulario. De modo el usuario pueda escribir, y luego usar JS para leer esos valores y guardarlos en variables. Pero existe un modo más sencillo de obtener entrada del usuario, para efectos de aprendizaje. Use la función prompt(..):
 
@@ -71,7 +72,7 @@ Una vez se ingresa el texto al dar click en "OK", se observa que el valor que in
 
 ![alt text](https://github.com/impak/Writting-about-Js/blob/main/img/fig3.png)
 
-**Operadores**
+## **Operadores**
 
 Los operadores son la forma en la que ejecutamos acciones en variables y valores.
 
@@ -104,7 +105,7 @@ Acá, se asigna el valor 2 a la variable a. Entonces, obtenemos el valor de la v
     
 -   Lógicos: `&&` (y), `||` (o), como en `a || b` que selecciona a o b. Estos operadores son usados para expresar condicionales compuestos, como si a o b seanverdaderos.
 
-**Valores y Tipos**
+## **Valores y Tipos**
 
 Las representaciones para los valores se llaman _tipos_ en terminología de programación. JavaScript posee tipos construidos para cada una de estas representaciones también llamados tipos _primitivos_:
 
@@ -126,7 +127,7 @@ true;
 false;
 ```
 
-**Conversión Entre Tipos**
+## **Conversión Entre Tipos**
 
 Si usted tiene un tipo de dato `number` pero necesita imprimirlo en pantalla, necesitará convertir el valor a tipo `string` y esta conversión en JavaScript es llamada "coerción". Similarmente, si alguien ingresa una serie de caractéres numéricos en un formulario de una página de ecommerce, es un `string`, pero si necesita usar ese valor para realizar operaciones matemáticas, necesitará _coercer_ al dato a que sea un `number`.
 
@@ -140,7 +141,7 @@ console.log( a );	// "42"
 console.log( b );	// 42
 ```
 
-**Comentarios en el Código**
+## **Comentarios en el código**
 
 Estos son partes de texto en su programa que son insertados puramente para explicárselo a un humano. El intérprete/compilador siempre ignora estos comentarios.
 
@@ -179,3 +180,137 @@ var a = /* arbitrary value */ 42;
 
 console.log( a );	// 42
 ```
+
+## **Variables**
+
+Las variables son utilizadas como contenedores donde guardamos algún valor de tipo específico (pueden ser numbers, strings, etc.).
+
+
+En nuestras variables podemos encontrarnos con dos versiones de tipado:
+
+- El _tipado estático_ o _tipado fuerte_ es utilizado para la precisión buscada dentro de un código, esto previene conversiones de valor no intencionadas.
+
+```jsx
+var example = 5;
+    //En este caso estamos asignándole a la variable example el valor 5. A esto también se lo llama "hardcodeo", que significa perder la prolijidad dejando valores y/o comportamientos fijos en el código de nuestro programa.
+```
+
+- El _tipado dinámico_ o _tipado débil_ permite a una variable almacenar cualquier tipo de valor en el tiempo.
+
+```jsx
+var example;
+
+//En este otro caso, no le estamos asignando valor alguno a la variable example, por lo cual, es muy probable que esta variable pueda ser vulnerada ya que no se le ha asignado ningún tipo (string, number, char, etc.).
+```
+
+JavaScript utiliza el _tipado dinámico_, lo que significa que las variables pueden guardar valores de cualquier tipo sin ningún tipado fuerte.
+
+Las variables en JavaScript son declaradas utilizando la sentencia <code>_**var**_</code>.
+
+ *Considere:*
+```jsx
+var valor = 10.00;
+
+valor = valor * 2;
+
+console.log(valor); //20.00
+
+//Si convertimos 'valor' a un string y agregamos "$" al principio:
+
+valor = "$" + String(valor);
+
+console.log(valor); // "$20.00"
+```
+La variable **valor** inicia guardando el número 10.00, luego almacena el resultado dde tipo **number** de **valor * 2**, lo cual es **20.00**.
+
+La primer instrucción **console.log(...)** tiene que hacer coerción *implícita* desde **number** a **string** para imprimirllo.
+
+Luego, la sentencia **valor = "signoPesos" + String (valor)** realiza coerción *explícita* del valor **20.00** a **string** y añade el caracter **"$"** al inicio. Hasta este punto, **valor** almacena el **string** con valor **"20.00"**, entonces el segundo **console.log(...)** no necesita realizar ninguna coerción para imprimirlo.
+
+Algunos desarrolladores pueden notar la flexibilidad de usar la variable **valor** para cada uno de los valores. En cambio, quienes prefieran el tipado estático podrían preferir una variable separada como **valorStr** para guardar el resultado final **"$20.00"**, ya que es de un tipo diferente.
+
+En este ejemplo **valor** almacena un valor que cambia con el curso del programa, gestionando el estado del mismo (el estado es seguir los cambios a los valores a medida que el programa es ejecutado).
+
+Algunas variables pueden centralizarse en la asignación de valores, estas son llamadas **constantes**, cuando se declara una variable con un valor e intención de *no cambiar* durante el programa.
+
+Las constantes son declaradas en la parte superior de un programa, así es conveniente para el desarrollador tener un lugar donde pueda cambiar el valor si así lo deseáse. 
+
+Por convención, las constantes se escriben con mayúscula sostenida y guiones bajos entre las palabras.
+
+Ejemplo:
+ 
+```jsx
+    const TAX_RATE = 0.08;	// 8% sales tax
+
+    var valor = 99.99;
+
+    valor = valor * 2;
+
+    valor = valor + (valor * TAX_RATE);
+
+    console.log( valor );				// 215.9784
+    console.log( valor.toFixed( 2 ) );	// "215.98"
+ ```
+
+La variable **TAX_RATE** es únicamente *constante* por convención. Si se llegara a necesitar actualizar el valor de el mismo a un 9%, podemos fácilmente actualizar el programa asignando a **TAX_RATE** el valor de **0.09** en un solo lugar, en vez de encontrar todas las ocurrencias del valor **0.08**.
+
+
+Las constantes son útiles como las variables con valores sin cambiar, excepto que las constantes previenen el cambio accidental de algún valor dónde sea que se haga después de la asignación inicial. Si usted intentó asignar algún valor distinto a **TAX_RATE** luego de su primera declaración, su programa podría rechazar el cambio.
+
+
+
+## **Bloques**
+
+Un bloque es definido rodeando una o más sentencias con una pareja de corchetes ``` {..}```. 
+
+*Considere*:
+
+```jsx
+var valor = 10.00;
+
+//bloque general
+{
+    valor = valor * 2;
+    console.log(valor); //20.00
+}
+```
+
+Los bloques son añadidos a algunas secuencias de control, como la sentencia **_if_** o un ciclo.
+
+_Ejemplo_
+```jsx
+var valor = 99.99;
+
+// iEs el valor mayor a 10?
+if (valor > 10) {			// <--Bloque adjunto al if
+	valor = valor * 2;
+	console.log( valor );	// 199.98
+}
+```
+El bloque <code>{...}</code> ejecutará las sentencias si el condicional es verdadero.
+
+
+## **Condicionales**
+
+Un condicional muy utilizado en JavaScript es **_if_**. 
+
+La sentencia **_if_** puede ser tratada como *true* o *false*, es decir: "Si esta condición es verdadera, haga lo siguiente...".  Esta sentencia requiere una expresión dentro del paréntesis la cual será tratada como *true* o *false* dependiendo de la cantidad mostrada en la variable.
+
+Asimismo puede declararse una alternativa si la condición no es verdadera, con la sentencia **_else_**. Considere:
+
+```jsx
+var edad;
+prompt("Ingrese su edad: ");
+
+if(edad > 18)
+{
+    alert("Ha ingresado al sistema.");
+}else
+{
+    alert("Error. No se puede ingresar al sistema.");
+}
+// Si la edad es mayor a 18, puede ingresar al sistema. En cambio, si la edad es menor NO puede ingresar al sistema.
+```
+
+
+Los condicionales existen en formas más allá del **_if_**. Por ejemplo, la sentencia _switch_ puede ser usada como un atajo para una serie de sentencias *if...else*.
