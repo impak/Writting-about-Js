@@ -8,7 +8,7 @@ En un lenguaje de programación, un conjunto de palabras, números, y operadores
  a = b * 2;
 ```
 
-##**Expresiones**
+## **Expresiones**
 
 Esta sentencia tiene varias "Expresiones" en ella:
 
