@@ -129,7 +129,7 @@ resultado = numeroUno + numeroDos;
 console.log(resultado);
 ```
 
-Podemos ejecutar este programa pegando el código en la consola de nuestro navegador y seguido de enter.
+Podemos ejecutar este programa pegando el código en la consola de nuestro navegador seguido de enter.
 
 Desglosamos el programa en un algoritmo de 4 pasos:
 
