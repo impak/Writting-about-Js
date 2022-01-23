@@ -112,3 +112,35 @@ Esto sirve para indicar que esa variable existe y que en otra instancia del cód
 ```jsx
 a = 1;
 ```
+
+**Programar**
+
+Podemos entender como programa una solución informática a una idea o problema. Y programar es crear ese programa.
+
+Ejemplo: Hacer un programa que sume dos números y que muestre en pantalla el resultado de ellos.
+
+```jsx
+var numeroUno, numeroDos, resultado;
+
+numeroUno = 6;
+numeroDos = 4;
+resultado = numeroUno + numeroDos;
+
+console.log(resultado);
+```
+
+Podemos ejecutar este programa pegando el código en la consola de nuestro navegador y seguido de enter.
+
+Desglosamos el programa en un algoritmo de 4 pasos:
+
+1. Inicio/Ingreso: `var numeroUno, numeroDos;` inicializa las variables `numeroUno` y `numeroDos` (esto le indica al computador que creaste 2 variables).
+2. Proceso: Asignamos el valor `6` a la variable `numeroUno` y el valor `4` a la variable `numeroDos`. Luego a la variable `resultado` y le asignamos las variables `numeroUno + numeroDos`.
+3. Egreso: Por último usamos el método `console.log` para imprimir por pantalla la variable `resultado`.
+4. Fin: Vemos el resultado.
+
+**console.log**	
+
+En el programa anterior usamos la interface `console` con su método `console.log`, para entender que son empecemos con sus definiciones:
+
+Console es una de las tantas interfaces que tiene javascript con el navegador y proporciona acceso a la consola de depuración del mismo. Por otro lado tenemos uno de los tantos métodos de console, `console.log` que envía un mensaje a la consola web. De este modo pudimos ver que hay de resultado en la variable `resultado`.
+
