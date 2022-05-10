@@ -1,6 +1,6 @@
 # Writting about Javascript
 
-Estos escritos son apuntes simples como recordatorios del lenguaje. 
+Apuntes simples como recordatorios del lenguaje. 
 
 **Sentencias**
 
